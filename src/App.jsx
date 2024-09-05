@@ -1,32 +1,23 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Banner from "./components/Banner";
+import Home from "./components/Home";
 import About from "./components/About";
-import Services from "./components/Services";
 import Expertise from "./components/Expertise";
-import Footer from "./components/Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <BrowserRouter>
-      <Header />
-
-      <Banner />
-      <About />
-      <Services />
-      <Expertise />
-
+      <Header /> {/* Keep the header across all routes */}
       <Routes>
-        <Route path="/skills" element={<Expertise />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Expertise />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
-      <Footer />
+      <Footer /> {/* Keep the footer across all routes */}
     </BrowserRouter>
   );
 }

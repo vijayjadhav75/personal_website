@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [brandName, setBrandName] = useState("Vijay Jadhav");
   const [menuLinks, setMenuLinks] = useState([
-    { title: "Home", link: "/home", id: 1 },
+    { title: "Home", link: "/", id: 1 },
     { title: "About", link: "/about", id: 2 },
     { title: "Skills", link: "/skills", id: 3 },
     { title: "Projects", link: "/projects", id: 4 },
@@ -48,21 +49,21 @@ const Header = () => {
         <div className="hidden lg:flex lg:items-center lg:space-x-6">
           <div className="flex flex-row lg:space-x-6">
             {menuLinks.map((link) => (
-              <a
+              <Link
                 key={link.id}
-                href={link.link}
+                to={link.link}
                 className="py-2 px-4 text-center lg:text-left hover:text-orange-600"
               >
                 {link.title}
-              </a>
+              </Link>
             ))}
           </div>
-          <a
-            href={actionButton.link}
+          <Link
+            to={actionButton.link}
             className="px-3 py-2 bg-orange-500 rounded-md hover:bg-orange-400 shadow text-1xl font-bold"
           >
             {actionButton.title}
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -72,20 +73,20 @@ const Header = () => {
       >
         <div className="flex flex-col space-y-4 py-4">
           {menuLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={link.link}
+              to={link.link}
               className="block py-2 text-center text-gray-700 hover:text-orange-600"
             >
               {link.title}
-            </a>
+            </Link>
           ))}
-          <a
-            href={actionButton.link}
+          <Link
+            to={actionButton.link}
             className="block px-3 py-2 bg-orange-500 rounded-md hover:bg-orange-400 shadow text-1xl font-bold text-center"
           >
             {actionButton.title}
-          </a>
+          </Link>
         </div>
       </div>
     </>
