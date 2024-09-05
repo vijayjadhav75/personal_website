@@ -4,7 +4,9 @@ const Expertise = () => {
   return (
     <>
       <div className="">
-        <h1 className="text-4xl font-bold underline text-center">My Expertise</h1>
+        <h1 className="text-4xl font-bold underline text-center">
+          My Expertise
+        </h1>
         {/* box section */}
         <div
           style={{
@@ -19,10 +21,10 @@ const Expertise = () => {
             <div className="text-center lg:text-left space-y-4">
               <h1 className="text-3xl font-bold">I love these technologies</h1>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
-                animi, autem quod itaque delectus labore voluptatum laudantium
-                libero, blanditiis aut tempore praesentium facere reiciendis
-                distinctio, exercitationem unde? Quod, voluptatem veniam!
+                I am passionate about utilizing modern technologies to build
+                innovative solutions. My expertise spans a wide range of tools
+                and frameworks, allowing me to develop efficient and scalable
+                applications.
               </p>
               <button className="px-3 py-2 rounded-md shadow-md bg-orange-500 hover:bg-orange-400">
                 Hire Me
@@ -49,6 +51,7 @@ const Expertise = () => {
                 "Tailwind CSS",
                 "ReactJS",
                 "State Management",
+                "MySql",
               ].map((skill, index) => (
                 <p
                   key={index}

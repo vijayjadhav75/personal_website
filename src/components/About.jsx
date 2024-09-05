@@ -5,13 +5,8 @@ const About = () => {
   const [data, setData] = useState({
     image: image,
     title: "Java Full Stack Developer",
-    desc1: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Doloribus voluptate minima est tempora odio porro eius blanditiis
-              ipsum vitae nihil.`,
-    desc2: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis voluptate sunt blanditiis voluptatum, magni soluta
-              excepturi temporibus non aliquid incidunt beatae alias
-              perspiciatis sapiente id. Iure perferendis rerum illum quod!`,
+    desc1: `As a Java full stack developer, I build robust backend systems using Core Java, J2EE, Spring Framework, and Hibernate, with MySQL for efficient database management. I focus on creating scalable and secure applications with seamless data handling through Spring DAO and Data JPA.`,
+    desc2: `On the frontend, I employ HTML, CSS, JavaScript, and ReactJS to develop dynamic and responsive user interfaces. My expertise in REST API development ensures smooth and effective communication between the client and server applications.`,
     actionButton: {
       title: "Read More...",
       link: "/readmore",

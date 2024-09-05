@@ -44,13 +44,25 @@ const Banner = () => {
           I am <span className="font-bold underline" ref={el}></span>
         </h2>
         <p className="mt-4 text-sm md:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-          obcaecati laudantium illum quisquam. Expedita, mollitia.
-          Necessitatibus veritatis ab temporibus amet repudiandae labore,
-          officia delectus laboriosam accusamus nostrum expedita nisi maxime
-          quis quasi deleniti mollitia! Inventore, voluptatem doloribus facilis
-          delectus iure enim. Quibusdam, at. Sapiente dolores ut fuga, quo
-          deserunt earum!
+          As a passionate and dedicated Java full stack web developer, I have
+          gained a strong foundation in both backend and frontend development
+          through hands-on projects and academic training. My core skills
+          include Core Java, J2EE, and the Spring Framework (including Spring
+          MVC, Spring Boot, and Spring DAO) for building scalable and efficient
+          applications. I am also proficient in Hibernate (ORM) and Data JPA for
+          database management, with extensive experience using MySQL.
+        </p>
+        <p className="mt-4 text-sm md:text-base">
+          On the frontend, I have experience with HTML, CSS, Tailwind CSS, and
+          JavaScript, allowing me to create visually appealing and responsive
+          user interfaces. I have worked with ReactJS and State Management to
+          develop dynamic and interactive web applications. Additionally, I am
+          well-versed in building and consuming REST APIs for seamless
+          communication between the frontend and backend.
+        </p>
+        <p className="mt-4 text-sm md:text-base">
+          Although I am a fresher, I am eager to apply my skills in real-world
+          scenarios and contribute to building innovative software solutions.
         </p>
         <div className="icons_container space-x-3 md:space-x-5 mt-4 flex justify-center">
           <a className="bg-gray-800 cursor-pointer border hover:bg-orange-600 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center">
