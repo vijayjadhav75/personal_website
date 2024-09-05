@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import image from "../assets/MyImage.jpg";
 import bannerBackground from "../assets/banner1.jpg";
 import Typed from "typed.js";
 
 const Banner = () => {
+  const [showFullContent, setShowFullContent] = useState(false);
   const el = useRef(null);
 
   useEffect(() => {
@@ -52,18 +53,38 @@ const Banner = () => {
           applications. I am also proficient in Hibernate (ORM) and Data JPA for
           database management, with extensive experience using MySQL.
         </p>
-        <p className="mt-4 text-sm md:text-base">
-          On the frontend, I have experience with HTML, CSS, Tailwind CSS, and
-          JavaScript, allowing me to create visually appealing and responsive
-          user interfaces. I have worked with ReactJS and State Management to
-          develop dynamic and interactive web applications. Additionally, I am
-          well-versed in building and consuming REST APIs for seamless
-          communication between the frontend and backend.
-        </p>
-        <p className="mt-4 text-sm md:text-base">
-          Although I am a fresher, I am eager to apply my skills in real-world
-          scenarios and contribute to building innovative software solutions.
-        </p>
+        {showFullContent && (
+          <>
+            <p className="mt-4 text-sm md:text-base">
+              On the frontend, I have experience with HTML, CSS, Tailwind CSS, and
+              JavaScript, allowing me to create visually appealing and responsive
+              user interfaces. I have worked with ReactJS and State Management to
+              develop dynamic and interactive web applications. Additionally, I am
+              well-versed in building and consuming REST APIs for seamless
+              communication between the frontend and backend.
+            </p>
+            <p className="mt-4 text-sm md:text-base">
+              Although I am a fresher, I am eager to apply my skills in real-world
+              scenarios and contribute to building innovative software solutions.
+            </p>
+          </>
+        )}
+        {!showFullContent && (
+          <button
+            onClick={() => setShowFullContent(true)}
+            className="mt-4 px-3 py-2 bg-orange-500 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-300 rounded-md shadow  text-sm md:text-xl"
+          >
+            Read More
+          </button>
+        )}
+        {showFullContent && (
+          <button
+            onClick={() => setShowFullContent(false)}
+            className="mt-4 px-3 py-2 bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 rounded-md shadow text-white text-lg md:text-xl"
+          >
+            Read Less
+          </button>
+        )}
         <div className="icons_container space-x-3 md:space-x-5 mt-4 flex justify-center">
           <a className="bg-gray-800 cursor-pointer border hover:bg-orange-600 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center">
             <i className="fa-brands text-lg md:text-2xl fa-square-facebook"></i>
@@ -84,12 +105,6 @@ const Banner = () => {
             <i className="fa-brands text-lg md:text-2xl fa-linkedin"></i>
           </a>
         </div>
-        {/* <a
-          className="mt-12 px-6 py-3 bg-orange-500 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-300 rounded-md shadow text-white text-lg md:text-xl"
-          href="/contact"
-        >
-          Contact me
-        </a> */}
       </div>
 
       {/* Image Section */}
