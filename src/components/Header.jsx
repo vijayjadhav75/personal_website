@@ -5,7 +5,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [brandName, setBrandName] = useState("Vijay Jadhav");
   const [menuLinks, setMenuLinks] = useState([
-    { title: "Home", link: "/", id: 1 },
+    { title: "Home", link: "/home", id: 1 },
     { title: "About", link: "/about", id: 2 },
     { title: "Skills", link: "/skills", id: 3 },
     { title: "Projects", link: "/projects", id: 4 },
