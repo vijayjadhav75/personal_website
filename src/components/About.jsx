@@ -1,5 +1,6 @@
 import { useState } from "react";
 import image from "../assets/MyImage.jpg";
+
 const About = () => {
   const [data, setData] = useState({
     image: image,
@@ -16,30 +17,30 @@ const About = () => {
       link: "/readmore",
     },
   });
+
   return (
     <>
       <div className="main-container py-10 bg-gray-100">
         <h1 className="text-4xl pb-10 font-bold text-center underline">
           About Me
         </h1>
-        <div className="flex items-center">
+        <div className="flex flex-col lg:flex-row items-center lg:space-x-10">
           {/* image container */}
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center lg:w-1/2">
             <img
-              style={{ borderRadius: "100%" }}
-              className="mt-5 w-1/2"
+              className="mt-5 w-2/3 sm:w-1/2 lg:w-3/4 rounded-full object-cover"
               src={data.image}
               alt="vijay jadhav"
             />
           </div>
 
           {/* text container */}
-          <div className="w-full flex justify-center">
-            <div className="space-y-3 w-2/3">
-              <h1 className="text-4xl font-bold">{data.title}</h1>
-              <p>{data.desc1}</p>
-              <p>{data.desc2}</p>
-              <button className="bg-orange-500 px-3 hover:bg-orange-400 py-2 rounded-md shadow-lg">
+          <div className="w-full flex justify-center lg:w-1/2 mt-10 lg:mt-0">
+            <div className="space-y-3 px-5 lg:px-0 w-full lg:w-2/3 text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl font-bold">{data.title}</h1>
+              <p className="text-sm sm:text-base">{data.desc1}</p>
+              <p className="text-sm sm:text-base">{data.desc2}</p>
+              <button className="bg-orange-500 px-3 py-2 hover:bg-orange-400 rounded-md shadow-lg">
                 {data.actionButton.title}
               </button>
             </div>
@@ -49,4 +50,5 @@ const About = () => {
     </>
   );
 };
+
 export default About;
