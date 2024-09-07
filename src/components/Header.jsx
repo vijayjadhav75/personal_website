@@ -16,6 +16,10 @@ const Header = () => {
     link: "/hire_me",
   });
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false); // Close menu on link click
+  };
+
   return (
     <>
       <div className="h-20 flex items-center justify-between px-4 sm:px-6 lg:px-16 bg-gray-100 border-b">
@@ -76,6 +80,7 @@ const Header = () => {
             <Link
               key={link.id}
               to={link.link}
+              onClick={handleLinkClick} // Close menu on link click
               className="block py-2 text-center text-gray-700 hover:text-orange-600"
             >
               {link.title}
@@ -83,6 +88,7 @@ const Header = () => {
           ))}
           <Link
             to={actionButton.link}
+            onClick={handleLinkClick} // Close menu on link click
             className="block px-3 py-2 bg-orange-500 rounded-md hover:bg-orange-400 shadow text-1xl font-bold text-center"
           >
             {actionButton.title}
