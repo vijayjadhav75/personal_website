@@ -11,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header /> {/* Keep the header across all routes */}
+      <Home/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
